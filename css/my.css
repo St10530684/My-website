@@ -241,4 +241,57 @@ h1 {
   .superscript::after {
     --size: 6rem;
   }
+
+
+  /* --- RESPONSIVE FIX FOR ALL DEVICES --- */
+
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .navbar ul {
+    flex-direction: column;
+    gap: 10px;
+    padding: 0;
+  }
+
+  .menu-grid, .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 15px;
+  }
+
+  .page-title h2 {
+    font-size: 24px;
+  }
+}
+
+/* PHONE - 480px and below */
+@media screen and (max-width: 480px) {
+  .menu-grid, .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .navbar ul li {
+    display: block;
+    margin: 5px 0;
+  }
+
+  footer {
+    text-align: center;
+    font-size: 14px;
+  }
 }
